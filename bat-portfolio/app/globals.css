@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --accent-color: #66FCF1; /* Standard Cyan */
+}
+
+.red-alert {
+  --accent-color: #FF0000; /* Emergency Red */
+  filter: sepia(20%) saturate(300%) hue-rotate(-50deg);
+}
+
+/* Update your Tailwind colors to use this variable */
+@layer base {
+  .text-batAccent {
+    color: var(--accent-color) !important;
+  }
+  .border-batAccent {
+    border-color: var(--accent-color) !important;
+  }
+  .bg-batAccent {
+    background-color: var(--accent-color) !important;
+  }
+}
+
+/* The Glitch Overlay for Red Alert */
+.red-alert::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+              linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 9999;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+body {
+  background: #050505;
+  color: white;
+}
