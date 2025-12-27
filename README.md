@@ -14,6 +14,5 @@ A high-performance, Next.js-powered command center featuring tactical UI compone
 - **Geofencing Visualization:** Research-driven data mapping.
 
 ### 📞 CONTACT_ESTABLISHED
-- **Mobile:** +91 9370430337
 - **Email:** ujjwaljagtap7@gmail.com
 - **Instagram:** @ujjwaljagtap_07
